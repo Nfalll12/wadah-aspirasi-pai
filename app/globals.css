@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-brutal-black;
+  }
+
+  body {
+    @apply bg-cream text-brutal-black font-body;
+  }
+}
+
+@layer utilities {
+  /* Neo Brutalism press effect: shrink shadow + push element in on hover/click */
+  .brutal-press {
+    @apply transition-all duration-150 ease-out;
+  }
+  .brutal-press:hover,
+  .brutal-press:active {
+    @apply shadow-none;
+    transform: translate(4px, 4px);
+  }
+
+  .brutal-press-sm:hover,
+  .brutal-press-sm:active {
+    transform: translate(3px, 3px);
+  }
+
+  .brutal-press-lg:hover,
+  .brutal-press-lg:active {
+    transform: translate(6px, 6px);
+  }
+
+  /* Custom scrollbar-less, simple focus ring replacement for inputs */
+  .input-brutal:focus {
+    @apply outline-none shadow-brutal-sm;
+  }
+}
