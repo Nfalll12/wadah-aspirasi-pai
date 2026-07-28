@@ -122,7 +122,7 @@ export default function AspirationForm() {
           value={isAnonim ? "-" : kelas}
           onChange={(e) => setKelas(e.target.value)}
           disabled={isAnonim}
-          placeholder="Misal: XII IPA 1"
+          placeholder="Misal: PAI 3A"
           className="input-brutal w-full rounded-lg border-4 border-brutal-black bg-cream px-4 py-3 font-body font-medium placeholder:text-black/40 disabled:cursor-not-allowed disabled:bg-black/10 disabled:text-black/50"
         />
       </div>
