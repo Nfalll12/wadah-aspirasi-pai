@@ -11,7 +11,7 @@ export default function Home() {
         <div className="mb-6 flex items-center gap-2 rounded-full border-4 border-brutal-black bg-brutal-blue px-4 py-1.5 shadow-brutal-sm">
           <Sparkles className="h-4 w-4" strokeWidth={2.5} />
           <span className="font-display text-xs font-bold uppercase tracking-widest">
-            PAI · Pendidikan Agama Islam
+            HMPS PAI 2026-2027
           </span>
         </div>
 
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
 
         <p className="mt-8 max-w-sm font-body text-sm text-black/50">
-          Aspirasimu langsung tersampaikan ke tim PAI. Boleh pakai nama, boleh
+          Aspirasimu langsung tersampaikan ke pengurus HMPS PAI. Boleh pakai nama, boleh
           juga anonim &mdash; yang penting suaramu terdengar.
         </p>
       </div>
