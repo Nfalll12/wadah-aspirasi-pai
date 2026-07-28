@@ -47,11 +47,11 @@ export async function POST(request: NextRequest) {
     // Format pesan rapi untuk Telegram (plain text, aman dari karakter
     // markdown seperti _ atau * yang bisa membuat Telegram menolak pesan)
     const text = [
-      "📣 Aspirasi Baru Masuk!",
+      "📬 <b>Aspirasi Baru — HMPS PAI</b>",
       "",
-      `👤 Nama: ${namaFinal}`,
-      `🏫 Kelas: ${kelasFinal}`,
-      `💬 Pesan: "${pesanFinal}"`,
+      `<b>👤 Nama:</b> ${namaFinal}`,
+      `<b>🏫 Kelas:</b> ${kelasFinal}`,
+      `<b>💬 Pesan:</b> "${pesanFinal}"`,
     ].join("\n");
 
     const telegramUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
