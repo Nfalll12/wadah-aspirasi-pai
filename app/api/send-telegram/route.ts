@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
       }) + " WIB";
 
     const text = [
-      "📬 <b>Aspirasi Baru — HMPS PAI</b>",
+      "<b>Aspirasi Baru — HMPS PAI</b>",
       "",
       `<b>👤 Nama:</b> ${namaFinal}`,
       `<b>🏫 Kelas:</b> ${kelasFinal}`,
