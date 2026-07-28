@@ -44,13 +44,24 @@ export async function POST(request: NextRequest) {
     const kelasFinal = isAnonim ? "-" : kelas?.trim() || "-";
     const pesanFinal = isiAspirasi.trim();
 
-    // Format pesan rapi untuk Telegram (plain text, aman dari karakter
-    // markdown seperti _ atau * yang bisa membuat Telegram menolak pesan)
+    // Waktu kirim, zona waktu Indonesia (WIB)
+    const waktuFinal =
+      new Date().toLocaleString("id-ID", {
+        timeZone: "Asia/Jakarta",
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      }) + " WIB";
+
     const text = [
       "📬 <b>Aspirasi Baru — HMPS PAI</b>",
       "",
       `<b>👤 Nama:</b> ${namaFinal}`,
       `<b>🏫 Kelas:</b> ${kelasFinal}`,
+      `<b>🕒 Waktu:</b> ${waktuFinal}`,
+      "",
       `<b>💬 Pesan:</b> "${pesanFinal}"`,
     ].join("\n");
 
@@ -62,6 +73,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         chat_id: CHAT_ID,
         text,
+        parse_mode: "HTML", // <- ini yang tadi hilang, penyebab <b> tampil mentah
       }),
     });
 
